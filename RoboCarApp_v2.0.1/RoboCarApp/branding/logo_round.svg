@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 108 108" width="512" height="512"><defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#16233b"/><stop offset="1" stop-color="#070b12"/></linearGradient>
+  <linearGradient id="am" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FFD166"/><stop offset="1" stop-color="#FF9F1A"/></linearGradient>
+  <linearGradient id="cy" x1="0" y1="1" x2="0" y2="0"><stop offset="0" stop-color="#4CC9F0"/><stop offset="1" stop-color="#8be9ff"/></linearGradient>
+  <radialGradient id="glow"><stop offset="0" stop-color="#FFB21A" stop-opacity=".30"/><stop offset="1" stop-color="#FFB21A" stop-opacity="0"/></radialGradient>
+</defs>
+<circle cx="54" cy="54" r="54" fill="url(#bg)"/><g transform="translate(54 54) scale(.86) translate(-54 -54)"><g>
+  <circle cx="54" cy="62" r="30" fill="url(#glow)"/>
+  <!-- radar arcs -->
+  <g fill="none" stroke="url(#cy)" stroke-linecap="round" stroke-width="3.4">
+    <path d="M44.5 36.5 A13 13 0 0 1 63.5 36.5" opacity=".95"/>
+    <path d="M38.5 30.5 A21.5 21.5 0 0 1 69.5 30.5" opacity=".62"/>
+    <path d="M32.5 24.5 A30 30 0 0 1 75.5 24.5" opacity=".32"/>
+  </g>
+  <circle cx="54" cy="42" r="3.6" fill="#4CC9F0"/>
+  <rect x="52.6" y="44" width="2.8" height="7" rx="1.4" fill="#4CC9F0"/>
+  <!-- body -->
+  <path d="M22 70 L26.5 58.5 Q28.5 53.5 34 53.5 L48 53.5 L50 51 Q51.5 49.5 54 49.5 L61 49.5 Q64.5 49.5 67 52.5 L74 60.5 Q85 61.5 86 69 L86 76 L22 76 Z" fill="url(#am)"/>
+  <path d="M33 57 L47 57 L47 64.5 L28.5 64.5 Z" fill="#0b1220" opacity=".92"/>
+  <path d="M52 56 L61 56 L68.5 64.5 L52 64.5 Z" fill="#0b1220" opacity=".92"/>
+  <rect x="80" y="66" width="6.5" height="3.6" rx="1.8" fill="#fff6d6"/>
+  <!-- wheels -->
+  <circle cx="37" cy="77" r="7.6" fill="#0b1220"/><circle cx="37" cy="77" r="7.6" fill="none" stroke="#E9EFF8" stroke-width="2.4"/><circle cx="37" cy="77" r="2.4" fill="#E9EFF8"/>
+  <circle cx="72" cy="77" r="7.6" fill="#0b1220"/><circle cx="72" cy="77" r="7.6" fill="none" stroke="#E9EFF8" stroke-width="2.4"/><circle cx="72" cy="77" r="2.4" fill="#E9EFF8"/>
+</g>
+</g></svg>

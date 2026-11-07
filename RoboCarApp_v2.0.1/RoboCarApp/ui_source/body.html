@@ -1,0 +1,64 @@
+{{DEFS}}
+<div id="splash"><div class="spl">{{MARK}}</div><h1>RoboCar</h1><p>کنترل هوشمند ماشین</p><div class="ver">v2.0.1</div></div>
+<div id="app">
+ <header>
+  <div class="pill" id="conn" data-act="reconnect"><i class="dot" id="connDot"></i><span id="connTxt">قطع</span><small id="pingTxt"></small></div>
+  <div class="title">{{MARK}}<span>RoboCar</span><small>2.0</small></div>
+  <button class="pill" id="lockBtn" data-act="goCards" style="color:inherit"><i data-i="lock" id="lockIco"></i><span id="lockTxt">—</span></button>
+  <div class="pill" id="batPill" data-act="goSense"><i data-i="bat"></i><span id="batTxt">--</span></div>
+  <button class="estop" data-act="stop"><i data-i="stop"></i>ایست</button>
+ </header>
+ <div id="banners"></div>
+ <main>
+  <section class="page on" id="pg-drive">
+   <div class="drive">
+    <div class="pad padL" id="padL"></div>
+    <div class="center">
+     <div class="modes" id="modes"></div>
+     <div class="hud">
+      <div class="distBox"><div class="distNum" id="dNum">--</div><div class="distLbl">سانتی‌متر تا مانع جلو</div><div class="bar"><i id="dBar"></i></div></div>
+      <canvas id="cvMini" width="260" height="170"></canvas>
+     </div>
+     <div class="chips" id="chips"></div>
+     <div class="speedRow"><span>سرعت</span><input type="range" id="spdRange" min="15" max="100" value="70"><b id="spdVal">70%</b></div>
+    </div>
+    <div class="pad padR" id="padR"></div>
+
+    <div class="overlay" id="lockOv"><div class="ovbox">
+      <div id="lockIcon" class="big pulse">🔒</div>
+      <h2 id="lockTitle" style="margin:8px 0 4px">ماشین خاموش است</h2>
+      <p class="hint" id="lockSub">کارت را نزدیک ماژول RFID (زیر ماشین) بگیرید تا ماشین روشن شود.</p>
+      <div class="cardAnim" id="cardAnim">💳</div>
+      <div class="btns" style="margin-top:12px"><button class="btn pri" data-act="unlockPw">🔑 روشن‌کردن با رمز</button><button class="btn" data-act="goCards">💳 مدیریت کارت‌ها</button></div>
+      <div class="btns" style="margin-top:8px"><button class="btn sm" data-act="find">📍 پیدا کردن ماشین (بوق)</button></div>
+    </div></div>
+    <div class="overlay" id="connOv"><div class="ovbox">
+      <div class="big pulse"><span class="mark2">{{MARK}}</span></div>
+      <h2 style="margin:8px 0 4px">ماشین پیدا نشد</h2>
+      <p class="hint">۱) ماشین را روشن کنید.<br>۲) گوشی را به وای‌فای <b id="ssidHint" dir="ltr">RoboCar</b> وصل کنید (رمز پیش‌فرض <b dir="ltr" id="passHint">robocar1234</b>).<br>۳) اگر گوشی پیام «بدون اینترنت» داد، «ادامه/Stay connected» را بزنید.</p>
+      <div class="btns" style="margin-top:12px"><button class="btn pri" data-act="openWifi">📶 تنظیمات وای‌فای گوشی</button><button class="btn" data-act="reconnect">🔄 تلاش دوباره</button></div>
+      <div class="btns" style="margin-top:8px"><button class="btn" data-act="demoOn">🎮 حالت نمایشی (بدون ماشین)</button><button class="btn sm" data-act="hideConn">بستن</button></div>
+    </div></div>
+    <div id="welcome"><div class="big">✅</div><h1 style="margin:6px 0">خوش آمدید</h1><h2 id="welcomeWho" style="margin:0;color:var(--acc)"></h2></div>
+   </div>
+  </section>
+
+  <section class="page" id="pg-sense"></section>
+  <section class="page" id="pg-radar"></section>
+  <section class="page" id="pg-cards"></section>
+  <section class="page" id="pg-calib"></section>
+  <section class="page" id="pg-set"></section>
+  <section class="page" id="pg-log"></section>
+ </main>
+ <nav id="tabs">
+  <button class="on" data-pg="drive"><b data-i="drive"></b>رانندگی</button>
+  <button data-pg="sense"><b data-i="sense"></b>حسگرها</button>
+  <button data-pg="radar"><b data-i="radar"></b>رادار</button>
+  <button data-pg="cards"><b data-i="card"></b>کارت‌ها</button>
+  <button data-pg="calib"><b data-i="calib"></b>کالیبره</button>
+  <button data-pg="set"><b data-i="set"></b>تنظیمات</button>
+  <button data-pg="log"><b data-i="log"></b>گزارش</button>
+ </nav>
+</div>
+<div id="modal"><div class="box" id="modalBox"></div></div>
+<div id="toasts"></div>
